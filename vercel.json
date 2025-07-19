@@ -2,7 +2,6 @@
   "version": 2,
   "name": "camping-journey-mx",
   "alias": ["camping-journey.com.mx", "www.camping-journey.com.mx"],
-  "regions": ["cle1", "lax1"],
   "builds": [
     {
       "src": "package.json",
@@ -75,18 +74,5 @@
   "redirects": [
     {
       "source": "/www.camping-journey.com.mx/(.*)",
-      "destination": "https://camping-journey.com.mx/$1",
-      "permanent": true
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "NEXT_PUBLIC_SITE_URL": "https://camping-journey.com.mx",
-    "NEXT_PUBLIC_DOMAIN": "camping-journey.com.mx"
-  },
-  "github": {
-    "autoDeployment": true,
-    "silent": false
-  }
-}
+      "destination": "https://camping-journey.com
 
