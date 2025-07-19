@@ -13,6 +13,7 @@ class SidebarLayoutController {
     this.currentLanguage = 'pt';
     
     this.init();
+    this.ensureSidebarClosed(); // Garantir que inicia fechado
   }
 
   init() {
@@ -419,16 +420,27 @@ class SidebarLayoutController {
     const wasDesktop = this.isDesktop;
     this.isDesktop = window.innerWidth >= 1024;
 
-    // If switching from mobile to desktop
-    if (!wasDesktop && this.isDesktop) {
-      this.closeSidebar();
-      document.body.classList.remove('sidebar-open');
-    }
+    // Always close sidebar on resize to maintain consistent behavior
+    this.closeSidebar();
+    document.body.classList.remove('sidebar-open');
+  }
 
-    // If switching from desktop to mobile
-    if (wasDesktop && !this.isDesktop) {
-      this.closeSidebar();
+  // Garantir que sidebar inicia fechado
+  ensureSidebarClosed() {
+    if (this.sidebar) {
+      this.sidebar.classList.remove('active');
     }
+    if (this.sidebarOverlay) {
+      this.sidebarOverlay.classList.remove('active');
+    }
+    document.body.classList.remove('sidebar-open');
+    
+    if (this.hamburgerMenu) {
+      this.hamburgerMenu.classList.remove('active');
+    }
+    
+    this.isSidebarOpen = false;
+    console.log('Sidebar initialized as closed');
   }
 
   // Public API
