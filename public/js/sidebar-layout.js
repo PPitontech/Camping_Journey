@@ -23,8 +23,9 @@ class SidebarLayoutController {
     this.setupLanguageSystem();
     this.setupResponsive();
     this.setupNavigation();
+    this.fixSidebarLogo(); // Fix logo loading
     
-    console.log('Sidebar Layout Controller initialized');
+    console.log('✅ Sidebar Layout Controller initialized - No conflicts');
   }
 
   setupElements() {
@@ -34,7 +35,7 @@ class SidebarLayoutController {
     this.sidebarClose = document.getElementById('sidebarClose');
     this.mainContent = document.getElementById('mainContent');
     
-    // Header hamburger menu
+    // Header hamburger menu - SINGLE CONTROL POINT
     this.hamburgerMenu = document.getElementById('hamburger-menu');
     
     // Dark mode toggle
@@ -50,28 +51,70 @@ class SidebarLayoutController {
     
     // Navigation links
     this.sidebarLinks = document.querySelectorAll('.sidebar-link');
+    
+    // Logo element
+    this.sidebarLogo = document.querySelector('.sidebar-logo-img');
+    
+    console.log('🔧 Sidebar elements setup completed');
+  }
+
+  fixSidebarLogo() {
+    // Fix sidebar logo loading
+    if (this.sidebarLogo) {
+      const timestamp = Date.now();
+      const logoUrl = `/images/logo-camping-journey-final.png?sidebar=${timestamp}`;
+      
+      console.log('🖼️ Fixing sidebar logo:', logoUrl);
+      
+      this.sidebarLogo.src = logoUrl;
+      this.sidebarLogo.alt = 'Camping Journey';
+      
+      this.sidebarLogo.onload = () => {
+        console.log('✅ Sidebar logo loaded successfully');
+      };
+      
+      this.sidebarLogo.onerror = () => {
+        console.error('❌ Sidebar logo failed, trying fallback');
+        this.sidebarLogo.src = `/images/Logo_Camping_Journey1.png?t=${timestamp}`;
+      };
+    }
   }
 
   setupEventListeners() {
-    // Hamburger menu toggle
+    // Clear any existing listeners to prevent conflicts
+    this.clearConflictingListeners();
+    
+    // Hamburger menu toggle - EXCLUSIVE CONTROL
     if (this.hamburgerMenu) {
+      // Remove any existing listeners
+      this.hamburgerMenu.replaceWith(this.hamburgerMenu.cloneNode(true));
+      this.hamburgerMenu = document.getElementById('hamburger-menu');
+      
       this.hamburgerMenu.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
+        console.log('🍔 Hamburger clicked - toggling sidebar');
         this.toggleSidebar();
       });
+      
+      console.log('✅ Hamburger menu listener attached (exclusive)');
     }
 
     // Sidebar close button
     if (this.sidebarClose) {
       this.sidebarClose.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
+        console.log('❌ Close button clicked');
         this.closeSidebar();
       });
     }
 
     // Overlay click to close
     if (this.sidebarOverlay) {
-      this.sidebarOverlay.addEventListener('click', () => {
+      this.sidebarOverlay.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('🔄 Overlay clicked - closing sidebar');
         this.closeSidebar();
       });
     }
@@ -98,31 +141,23 @@ class SidebarLayoutController {
         if (option) {
           e.preventDefault();
           const lang = option.dataset.lang;
-          if (lang) {
-            this.changeLanguage(lang);
-          }
+          this.changeLanguage(lang);
         }
       });
     }
 
-    // Close language dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-      if (this.languageToggleSidebar && this.languageDropdownSidebar &&
-          !this.languageToggleSidebar.contains(e.target) &&
-          !this.languageDropdownSidebar.contains(e.target)) {
-        this.closeLanguageDropdown();
-      }
+    // Navigation links
+    this.sidebarLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Don't prevent default for anchor links
+        this.closeSidebar(); // Close sidebar when clicking nav links
+      });
     });
 
-    // Keyboard navigation
+    // Keyboard support
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        if (this.isSidebarOpen) {
-          this.closeSidebar();
-        }
-        if (this.languageDropdownSidebar?.classList.contains('active')) {
-          this.closeLanguageDropdown();
-        }
+      if (e.key === 'Escape' && this.isSidebarOpen) {
+        this.closeSidebar();
       }
     });
 
@@ -130,9 +165,26 @@ class SidebarLayoutController {
     window.addEventListener('resize', () => {
       this.handleResize();
     });
+
+    console.log('🎧 All event listeners setup completed');
+  }
+
+  clearConflictingListeners() {
+    // Remove any global menu managers that might conflict
+    if (window.hamburgerMenuManager) {
+      console.log('🧹 Clearing conflicting hamburger menu manager');
+      delete window.hamburgerMenuManager;
+    }
+    
+    if (window.HamburgerMenuManager) {
+      console.log('🧹 Clearing conflicting HamburgerMenuManager class');
+      delete window.HamburgerMenuManager;
+    }
   }
 
   toggleSidebar() {
+    console.log('🔄 Toggle sidebar called, current state:', this.isSidebarOpen);
+    
     if (this.isSidebarOpen) {
       this.closeSidebar();
     } else {
@@ -141,58 +193,55 @@ class SidebarLayoutController {
   }
 
   openSidebar() {
-    if (!this.sidebar) return;
-
-    this.isSidebarOpen = true;
-
-    // Add active classes
-    this.sidebar.classList.add('active');
-    if (this.sidebarOverlay) this.sidebarOverlay.classList.add('active');
-
-    // Prevent body scroll on mobile
-    if (!this.isDesktop) {
-      document.body.classList.add('sidebar-open');
+    if (!this.sidebar || !this.sidebarOverlay) {
+      console.error('❌ Sidebar elements not found');
+      return;
     }
 
-    // Update hamburger menu state
+    console.log('📂 Opening sidebar');
+    
+    this.isSidebarOpen = true;
+    this.sidebar.classList.add('active');
+    this.sidebarOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Update hamburger menu appearance
     if (this.hamburgerMenu) {
       this.hamburgerMenu.classList.add('active');
     }
 
-    // Focus management
+    // Fix logo when sidebar opens
     setTimeout(() => {
-      const firstLink = this.sidebar.querySelector('.sidebar-link');
-      if (firstLink) {
-        firstLink.focus();
-      }
-    }, 300);
+      this.fixSidebarLogo();
+    }, 100);
 
-    console.log('Sidebar opened');
+    console.log('✅ Sidebar opened successfully');
   }
 
   closeSidebar() {
-    if (!this.sidebar) return;
+    if (!this.sidebar || !this.sidebarOverlay) {
+      console.error('❌ Sidebar elements not found');
+      return;
+    }
 
+    console.log('📁 Closing sidebar');
+    
     this.isSidebarOpen = false;
-
-    // Remove active classes
     this.sidebar.classList.remove('active');
-    if (this.sidebarOverlay) this.sidebarOverlay.classList.remove('active');
+    this.sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = '';
 
-    // Restore body scroll
-    document.body.classList.remove('sidebar-open');
-
-    // Update hamburger menu state
+    // Update hamburger menu appearance
     if (this.hamburgerMenu) {
       this.hamburgerMenu.classList.remove('active');
     }
 
-    // Return focus to hamburger menu
-    if (this.hamburgerMenu) {
-      this.hamburgerMenu.focus();
+    // Close language dropdown if open
+    if (this.languageDropdownSidebar) {
+      this.languageDropdownSidebar.classList.remove('active');
     }
 
-    console.log('Sidebar closed');
+    console.log('✅ Sidebar closed successfully');
   }
 
   setupDarkMode() {
@@ -427,20 +476,22 @@ class SidebarLayoutController {
 
   // Garantir que sidebar inicia fechado
   ensureSidebarClosed() {
+    console.log('🔒 Ensuring sidebar starts closed');
+    this.isSidebarOpen = false;
+    
     if (this.sidebar) {
       this.sidebar.classList.remove('active');
     }
+    
     if (this.sidebarOverlay) {
       this.sidebarOverlay.classList.remove('active');
     }
-    document.body.classList.remove('sidebar-open');
     
     if (this.hamburgerMenu) {
       this.hamburgerMenu.classList.remove('active');
     }
     
-    this.isSidebarOpen = false;
-    console.log('Sidebar initialized as closed');
+    document.body.style.overflow = '';
   }
 
   // Public API
