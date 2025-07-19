@@ -123,6 +123,21 @@ class EnhancedI18nManager {
           clear: "Limpar Carrinho",
           checkout: "Finalizar Compra"
         },
+        utilities: {
+          title: "Painel de Controle",
+          website: "Site Web",
+          viewSite: "Ver Site",
+          dashboard: "Dashboard",
+          domain: "Domínio",
+          pending: "Pendente",
+          copy: "Copiar",
+          email: "Email",
+          analytics: "Analytics",
+          performance: "Performance",
+          seo: "SEO",
+          refresh: "Atualizar",
+          maintenance: "Manutenção"
+        },
         testimonials: {
           title: "O Que Nossos Aventureiros Dizem",
           subtitle: "Histórias reais de clientes satisfeitos",
@@ -227,6 +242,21 @@ class EnhancedI18nManager {
           clear: "Clear Cart",
           checkout: "Checkout"
         },
+        utilities: {
+          title: "Control Panel",
+          website: "Website",
+          viewSite: "View Site",
+          dashboard: "Dashboard",
+          domain: "Domain",
+          pending: "Pending",
+          copy: "Copy",
+          email: "Email",
+          analytics: "Analytics",
+          performance: "Performance",
+          seo: "SEO",
+          refresh: "Refresh",
+          maintenance: "Maintenance"
+        },
         testimonials: {
           title: "What Our Adventurers Say",
           subtitle: "Real stories from satisfied customers",
@@ -330,6 +360,21 @@ class EnhancedI18nManager {
           total: "Total:",
           clear: "Limpiar Carrito",
           checkout: "Finalizar Compra"
+        },
+        utilities: {
+          title: "Panel de Control",
+          website: "Sitio Web",
+          viewSite: "Ver Sitio",
+          dashboard: "Dashboard",
+          domain: "Dominio",
+          pending: "Pendiente",
+          copy: "Copiar",
+          email: "Correo Electrónico",
+          analytics: "Analytics",
+          performance: "Rendimiento",
+          seo: "SEO",
+          refresh: "Actualizar",
+          maintenance: "Mantenimiento"
         },
         testimonials: {
           title: "Lo Que Dicen Nuestros Aventureros",

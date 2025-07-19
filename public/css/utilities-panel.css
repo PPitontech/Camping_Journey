@@ -1,0 +1,435 @@
+/**
+ * ===================================
+ * UTILITIES PANEL - CAMPING JOURNEY
+ * Premium control panel with organized utilities
+ * ===================================
+ */
+
+/* Utilities Toggle Button */
+.utilities-toggle {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.utilities-toggle:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.utilities-toggle:active {
+  transform: translateY(0);
+}
+
+/* Shimmer effect */
+.utilities-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.utilities-toggle:hover::before {
+  left: 100%;
+}
+
+/* Utilities Panel */
+.utilities-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.utilities-panel.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Utilities Overlay */
+.utilities-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+/* Utilities Content */
+.utilities-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(26, 26, 26, 0.98);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  overflow-y: auto;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.utilities-panel:not(.active) .utilities-content {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Utilities Header */
+.utilities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.utilities-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.utilities-logo {
+  height: 32px;
+  width: auto;
+  filter: brightness(1.2);
+}
+
+.utilities-title h2 {
+  color: #D4AF37;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.utilities-close {
+  background: none;
+  border: none;
+  color: #D4AF37;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.utilities-close:hover {
+  background: rgba(212, 175, 55, 0.2);
+  transform: scale(1.1);
+}
+
+/* Utilities Grid */
+.utilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 25px;
+}
+
+/* Utility Section */
+.utility-section {
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.utility-section:hover {
+  background: rgba(212, 175, 55, 0.08);
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+.utility-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(212, 175, 55, 0.15);
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.utility-section h3 {
+  color: #E5E7EB;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+
+/* Utility Actions */
+.utility-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.utility-btn {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #E5E7EB;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.utility-btn:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.5);
+  color: #D4AF37;
+  transform: translateY(-1px);
+}
+
+/* Utility Status */
+.utility-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.status-label {
+  color: #E5E7EB;
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.status-indicator {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-indicator.pending {
+  background: rgba(255, 193, 7, 0.2);
+  color: #FFC107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.status-indicator.active {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+/* Utility List */
+.utility-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.email-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #E5E7EB;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+  background: rgba(212, 175, 55, 0.2);
+}
+
+/* Performance Metrics */
+.performance-metrics {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  flex: 1;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: #9CA3AF;
+  margin-bottom: 4px;
+}
+
+.metric-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.metric-value.good {
+  color: #10B981;
+}
+
+.metric-value.warning {
+  color: #F59E0B;
+}
+
+.metric-value.error {
+  color: #EF4444;
+}
+
+/* Utilities Footer */
+.utilities-footer {
+  padding: 20px 25px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quick-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #E5E7EB;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-action-btn:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.5);
+  color: #D4AF37;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .utilities-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .utilities-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .utilities-header {
+    padding: 15px 20px;
+  }
+  
+  .utility-section {
+    padding: 15px;
+  }
+  
+  .quick-actions {
+    flex-direction: column;
+  }
+  
+  .quick-action-btn {
+    justify-content: center;
+  }
+}
+
+/* Light Theme Support */
+[data-theme="light"] .utilities-content {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+[data-theme="light"] .utilities-header {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+[data-theme="light"] .utility-section {
+  background: rgba(212, 175, 55, 0.05);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+[data-theme="light"] .utility-section h3,
+[data-theme="light"] .utilities-title h2,
+[data-theme="light"] .status-label,
+[data-theme="light"] .email-item {
+  color: #374151;
+}
+
+[data-theme="light"] .utility-btn,
+[data-theme="light"] .quick-action-btn {
+  color: #374151;
+}
+
+/* Scrollbar Styling */
+.utilities-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.utilities-content::-webkit-scrollbar-track {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.utilities-content::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.5);
+  border-radius: 3px;
+}
+
+.utilities-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.7);
+} 
