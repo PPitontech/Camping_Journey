@@ -131,7 +131,7 @@
         
         <!-- Left Side - Hamburger Menu -->
         <div class="header-left">
-          <button class="hamburger-menu" id="hamburger-menu" onclick="toggleHamburgerMenu()" aria-label="Menu">
+          <button class="hamburger-menu" id="hamburger-menu" aria-label="Menu">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
@@ -203,132 +203,7 @@
       
     </div>
     
-    <!-- Hamburger Menu Overlay -->
-    <div class="hamburger-overlay" id="hamburger-overlay" onclick="closeHamburgerMenu()"></div>
-    
-    <!-- Hamburger Menu Panel -->
-    <div class="hamburger-panel" id="hamburger-panel">
-      <div class="hamburger-header">
-        <div class="hamburger-logo">
-          <img src="images/Logo_Camping_Journey1.png" alt="Camping Journey" loading="lazy">
-        </div>
-        <button class="hamburger-close" onclick="closeHamburgerMenu()" aria-label="Close Menu">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      
-      <div class="hamburger-content">
-        
-        <!-- Profile Section -->
-        <div class="menu-section">
-          <h3 class="section-title">
-            <i class="fas fa-user"></i>
-            <span data-i18n="menu.profile">Profile</span>
-          </h3>
-          <ul class="section-links">
-            <li><a href="#login" data-i18n="menu.login">Login / Register</a></li>
-            <li><a href="#account" data-i18n="menu.account">My Account</a></li>
-            <li><a href="#orders" data-i18n="menu.orders">My Orders</a></li>
-            <li><a href="#wishlist" data-i18n="menu.wishlist">Wishlist</a></li>
-          </ul>
-        </div>
-        
-        <!-- Navigation Section -->
-        <div class="menu-section">
-          <h3 class="section-title">
-            <i class="fas fa-compass"></i>
-            <span data-i18n="menu.navigation">Navigation</span>
-          </h3>
-          <ul class="section-links">
-            <li><a href="#items" data-i18n="nav.items">Items</a></li>
-            <li><a href="#mexico-stock" data-i18n="nav.readyStock">Ready Stock</a></li>
-            <li><a href="#new-arrivals" data-i18n="nav.newArrivals">New Arrivals</a></li>
-            <li><a href="#wild-news" data-i18n="nav.wildNews">Wild News</a></li>
-            <li><a href="#story" data-i18n="nav.ourStory">Our Story</a></li>
-            <li><a href="#community" data-i18n="nav.community">Community</a></li>
-          </ul>
-        </div>
-        
-        <!-- Settings Section -->
-        <div class="menu-section">
-          <h3 class="section-title">
-            <i class="fas fa-cog"></i>
-            <span data-i18n="menu.settings">Settings</span>
-          </h3>
-          <ul class="section-links">
-            <li>
-              <a href="#language" onclick="toggleLanguageDropdown()">
-                <span data-i18n="menu.language">Language</span>
-                <span class="current-lang" id="menu-current-lang">PT 🇧🇷</span>
-              </a>
-            </li>
-            <li>
-              <a href="#theme" onclick="toggleTheme()">
-                <span data-i18n="menu.theme">Theme</span>
-                <span class="theme-indicator" id="theme-indicator">🌙</span>
-              </a>
-            </li>
-            <li><a href="#notifications" data-i18n="menu.notifications">Notifications</a></li>
-            <li><a href="#currency" data-i18n="menu.currency">Currency</a></li>
-          </ul>
-        </div>
-        
-        <!-- Security Section -->
-        <div class="menu-section">
-          <h3 class="section-title">
-            <i class="fas fa-shield-alt"></i>
-            <span data-i18n="menu.security">Security</span>
-          </h3>
-          <ul class="section-links">
-            <li><a href="#password" data-i18n="menu.changePassword">Change Password</a></li>
-            <li><a href="#2fa" data-i18n="menu.twoFactor">Two-Factor Auth</a></li>
-            <li><a href="#sessions" data-i18n="menu.activeSessions">Active Sessions</a></li>
-            <li><a href="#privacy" data-i18n="menu.privacy">Privacy Policy</a></li>
-          </ul>
-        </div>
-        
-        <!-- Support Section -->
-        <div class="menu-section">
-          <h3 class="section-title">
-            <i class="fas fa-headset"></i>
-            <span data-i18n="menu.support">Support</span>
-          </h3>
-          <ul class="section-links">
-            <li><a href="#faq" data-i18n="menu.faq">FAQ</a></li>
-            <li><a href="#contact" data-i18n="menu.contact">Contact</a></li>
-            <li><a href="#tracking" data-i18n="menu.tracking">Order Tracking</a></li>
-            <li><a href="#returns" data-i18n="menu.returns">Returns & Warranty</a></li>
-          </ul>
-        </div>
-        
-        <!-- Company Section -->
-        <div class="menu-section">
-          <h3 class="section-title">
-            <i class="fas fa-building"></i>
-            <span data-i18n="menu.company">Company</span>
-          </h3>
-          <ul class="section-links">
-            <li><a href="#about" data-i18n="menu.about">About Us</a></li>
-            <li><a href="#sustainability" data-i18n="menu.sustainability">Sustainability</a></li>
-            <li><a href="#careers" data-i18n="menu.careers">Careers</a></li>
-            <li><a href="#press" data-i18n="menu.press">Press</a></li>
-          </ul>
-        </div>
-        
-      </div>
-      
-      <!-- Menu Footer -->
-      <div class="hamburger-footer">
-        <div class="social-links">
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-        </div>
-        <p class="copyright" data-i18n="menu.copyright">© 2024 Camping Journey MX</p>
-      </div>
-      
-    </div>
+    <!-- Menu antigo removido - usando novo sidebar -->
     
   </header>
 
@@ -794,11 +669,9 @@
   <script src="js/language-dropdown.js"></script>
   <script src="js/cart-system.js"></script>
   <script src="js/navigation-system.js"></script>
-  <script src="js/hamburger-menu.js"></script>
+  <!-- hamburger-menu.js removido - usando sidebar-layout.js -->
   <script src="js/language-switcher.js"></script>
-  <script src="js/debug-header.js"></script>
-  <script src="js/cart-manager.js"></script>
-  <script src="js/duplicate-cleaner.js"></script>
+  <!-- Scripts de debug removidos para produção -->
   <script src="js/main.js"></script>
   <script>
     // Mobile menu toggle
