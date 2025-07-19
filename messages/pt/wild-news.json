@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Wild News | Camping Journey Equipaments MX",
+    "description": "Histórias inspiradoras de aventuras ao ar livre, dicas de especialistas e guias para suas próximas jornadas na natureza.",
+    "keywords": "histórias outdoor, aventuras na natureza, dicas de camping, guias de aventura, equipamentos outdoor, camping méxico"
+  },
+  "hero": {
+    "title": "WILD NEWS",
+    "subtitle": "Histórias que Inspiram Aventuras"
+  },
+  "featured": {
+    "label": "DESTAQUE",
+    "readMore": "Ler Artigo Completo"
+  },
+  "latestArticles": {
+    "title": "ÚLTIMOS ARTIGOS",
+    "readMore": "Ler Mais"
+  },
+  "categories": {
+    "title": "CATEGORIAS",
+    "all": "Todos",
+    "adventure": "Aventura",
+    "gear": "Equipamentos",
+    "survival": "Sobrevivência",
+    "nature": "Natureza",
+    "community": "Comunidade"
+  },
+  "pagination": {
+    "prev": "Anterior",
+    "next": "Próximo"
+  },
+  "newsletter": {
+    "title": "INSCREVA-SE PARA MAIS HISTÓRIAS",
+    "description": "Receba as melhores histórias de aventura e dicas de equipamentos diretamente na sua caixa de entrada.",
+    "placeholder": "Seu endereço de email",
+    "button": "Inscrever-se",
+    "privacyNote": "Respeitamos sua privacidade. Cancele sua inscrição a qualquer momento."
+  },
+  "footer": {
+    "company": "Empresa",
+    "about": "Sobre Nós",
+    "contact": "Contato",
+    "careers": "Carreiras",
+    "shop": "Loja",
+    "newArrivals": "Novidades",
+    "bestSellers": "Mais Vendidos",
+    "localStock": "Entrega Rápida no México",
+    "global": "Coleção Global",
+    "support": "Suporte",
+    "shipping": "Envio e Devoluções",
+    "faq": "Perguntas Frequentes",
+    "trackOrder": "Rastrear Pedido",
+    "legal": "Legal",
+    "terms": "Termos e Condições",
+    "privacy": "Política de Privacidade",
+    "cookies": "Política de Cookies",
+    "copyright": "© 2025 Camping Journey Equipaments MX. Todos os direitos reservados."
+  },
+  "articleMeta": {
+    "by": "Por",
+    "published": "Publicado em",
+    "updated": "Atualizado em",
+    "readTime": "min de leitura",
+    "share": "Compartilhar"
+  },
+  "relatedArticles": {
+    "title": "ARTIGOS RELACIONADOS",
+    "readMore": "Ler Mais"
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "products": [
+    {
+      "id": "mx001",
+      "name": "Ultralight Camping Tent",
+      "description": "Premium 2-person ultralight tent, perfect for backpacking and minimalist camping adventures.",
+      "price": 2499.99,
+      "currency": "MXN",
+      "images": [
+        "images/products/local/tent-1.webp",
+        "images/products/local/tent-2.webp",
+        "images/products/local/tent-3.webp"
+      ],
+      "category": "Tents",
+      "tags": ["ultralight", "premium", "2-person", "waterproof"],
+      "weight": "1.2kg",
+      "dimensions": "213 x 127 x 100cm",
+      "colors": ["Forest Green", "Sunset Orange"],
+      "rating": 4.8,
+      "reviews": 124,
+      "stock": 15,
+      "local_stock": true,
+      "shipping_time": "1-3 days",
+      "featured": true
+    },
+    {
+      "id": "mx002",
+      "name": "Compact Camping Stove",
+      "description": "Efficient and portable camping stove with piezo ignition. Perfect for quick meals in the wilderness.",
+      "price": 899.99,
+      "currency": "MXN",
+      "images": [
+        "images/products/local/stove-1.webp",
+        "images/products/local/stove-2.webp"
+      ],
+      "category": "Cooking",
+      "tags": ["compact", "lightweight", "efficient"],
+      "weight": "0.3kg",
+      "dimensions": "9 x 9 x 8cm",
+      "colors": ["Silver", "Black"],
+      "rating": 4.7,
+      "reviews": 89,
+      "stock": 22,
+      "local_stock": true,
+      "shipping_time": "1-2 days",
+      "featured": false
+    },
+    {
+      "id": "mx003",
+      "name": "Premium Sleeping Bag",
+      "description": "Ultra-comfortable sleeping bag rated for temperatures down to -5°C. Compact and lightweight design.",
+      "price": 1799.99,
+      "currency": "MXN",
+      "images": [
+        "images/products/local/sleeping-bag-1.webp",
+        "images/products/local/sleeping-bag-2.webp"
+      ],
+      "category": "Sleep",
+      "tags": ["warm", "compact", "lightweight", "premium"],
+      "weight": "0.9kg",
+      "dimensions": "30 x 20cm (packed)",
+      "colors": ["Navy Blue", "Dark Green"],
+      "rating": 4.9,
+      "reviews": 67,
+      "stock": 10,
+      "local_stock": true,
+      "shipping_time": "1-3 days",
+      "featured": true
+    },
+    {
+      "id": "mx004",
+      "name": "Tactical Headlamp",
+      "description": "Powerful 300-lumen LED headlamp with multiple lighting modes and adjustable strap.",
+      "price": 499.99,
+      "currency": "MXN",
+      "images": [
+        "images/products/local/headlamp-1.webp",
+        "images/products/local/headlamp-2.webp"
+      ],
+      "category": "Lighting",
+      "tags": ["bright", "waterproof", "lightweight"],
+      "weight": "0.1kg",
+      "dimensions": "6 x 4 x 3cm",
+      "colors": ["Black", "Orange"],
+      "rating": 4.6,
+      "reviews": 103,
+      "stock": 30,
+      "local_stock": true,
+      "shipping_time": "1-2 days",
+      "featured": false
+    },
+    {
+      "id": "mx005",
+      "name": "Insulated Water Bottle",
+      "description": "Double-walled vacuum insulated water bottle that keeps drinks cold for 24 hours or hot for 12 hours.",
+      "price": 349.99,
+      "currency": "MXN",
+      "images": [
+        "images/products/local/bottle-1.webp",
+        "images/products/local/bottle-2.webp"
+      ],
+      "category": "Hydration",
+      "tags": ["insulated", "durable", "leak-proof"],
+      "weight": "0.3kg",
+      "dimensions": "26 x 7cm",
+      "colors": ["Matte Black", "Forest Green", "Mountain Blue"],
+      "rating": 4.8,
+      "reviews": 156,
+      "stock": 45,
+      "local_stock": true,
+      "shipping_time": "1-2 days",
+      "featured": true
+    },
+    {
+      "id": "ds001",
+      "name": "Ultralight Hammock",
+      "description": "Packable nylon hammock that supports up to 180kg. Perfect for relaxing in the wilderness.",
+      "price": 799.99,
+      "currency": "MXN",
+      "images": [
+        "images/products/global/hammock-1.webp",
+        "images/products/global/hammock-2.webp"
+      ],
+      "category": "Relaxation",
+      "tags": ["ultralight", "packable", "durable"],
+      "weight": "0.3kg",
+      "dimensions": "15 x 10cm (packed)",
+      "colors": ["Blue/Gray", "Green/Black"],
+      "rating": 4.7,
+      "reviews": 82,
+      "stock": null,
+      "local_stock": false,
+      "shipping_time": "10-15 days",
+      "featured": false,
+      "supplier": "DSers/AliExpress"
+    },
+    {
+      "id": "ds002",
+      "name": "Titanium Camping Cookware Set",
+      "description": "Ultralight titanium cookware set including pot, pan, and utensils. Perfect for backpacking.",
+      "price": 1299.99,
+      "currency": "MXN",
+      "images": [
+        "images/products/global/cookware-1.webp",
+        "images/products/global/cookware-2.webp"
+      ],
+      "category": "Cooking",
+      "tags": ["titanium", "ultralight", "durable", "compact"],
+      "weight": "0.4kg",
+      "dimensions": "18 x 10 x 10cm (packed)",
+      "colors": ["Titanium"],
+      "rating": 4.9,
+      "reviews": 45,
+      "stock": null,
+      "local_stock": false,
+      "shipping_time": "12-18 days",
+      "featured": true,
+      "supplier": "Zendrop"
+    },
+    {
+      "id": "ds003",
+      "name": "Solar Camping Lantern",
+      "description": "Collapsible solar-powered LED lantern with USB charging port. Three brightness levels.",
+      "price": 599.99,
+      "currency": "MXN",
+      "images": [
+        "images/products/global/lantern-1.webp",
+        "images/products/global/lantern-2.webp"
+      ],
+      "category": "Lighting",
+      "tags": ["solar", "collapsible", "waterproof"],
+      "weight": "0.2kg",
+      "dimensions": "10 x 10 x 15cm (expanded)",
+      "colors": ["Yellow", "Green"],
+      "rating": 4.5,
+      "reviews": 67,
+      "stock": null,
+      "local_stock": false,
+      "shipping_time": "10-15 days",
+      "featured": false,
+      "supplier": "DSers/AliExpress"
+    },
+    {
+      "id": "ds004",
+      "name": "Portable Water Filter",
+      "description": "Compact water filter that removes 99.9999% of bacteria and parasites. Essential for backcountry adventures.",
+      "price": 899.99,
+      "currency": "MXN",
+      "images": [
+        "images/products/global/filter-1.webp",
+        "images/products/global/filter-2.webp"
+      ],
+      "category": "Hydration",
+      "tags": ["filter", "survival", "emergency"],
+      "weight": "0.1kg",
+      "dimensions": "16 x 6cm",
+      "colors": ["Blue"],
+      "rating": 4.8,
+      "reviews": 123,
+      "stock": null,
+      "local_stock": false,
+      "shipping_time": "12-18 days",
+      "featured": true,
+      "supplier": "Spocket"
+    },
+    {
+      "id": "ds005",
+      "name": "Compact Trekking Poles",
+      "description": "Adjustable, collapsible trekking poles made from aircraft-grade aluminum. Shock-absorbing and lightweight.",
+      "price": 749.99,
+      "currency": "MXN",
+      "images": [
+        "images/products/global/poles-1.webp",
+        "images/products/global/poles-2.webp"
+      ],
+      "category": "Hiking",
+      "tags": ["adjustable", "lightweight", "collapsible"],
+      "weight": "0.5kg",
+      "dimensions": "65-135cm (adjustable)",
+      "colors": ["Black/Red", "Silver/Blue"],
+      "rating": 4.6,
+      "reviews": 89,
+      "stock": null,
+      "local_stock": false,
+      "shipping_time": "10-15 days",
+      "featured": false,
+      "supplier": "DSers/AliExpress"
+    }
+  ]
+}

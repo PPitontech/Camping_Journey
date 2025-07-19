@@ -1,0 +1,459 @@
+/**
+ * UI Elements CSS - Camping Journey Equipaments MX
+ * Estilos para elementos UI personalizados baseados na identidade visual oficial
+ */
+
+:root {
+  /* Paleta de cores oficial */
+  --dourado-trilha: #C6933A;
+  --azul-noite-profundo: #1B2E44;
+  --verde-floresta-escuro: #2C4A3B;
+  --preto-intenso: #111111;
+  
+  /* Novas cores premium */
+  --amber-primary: #f59e0b;
+  --amber-dark: #d97706;
+  --amber-light: #fbbf24;
+  
+  /* Variáveis RGB para uso em transparências */
+  --dourado-trilha-rgb: 198, 147, 58;
+  --azul-noite-profundo-rgb: 27, 46, 68;
+  --verde-floresta-escuro-rgb: 44, 74, 59;
+  --preto-intenso-rgb: 17, 17, 17;
+  --amber-primary-rgb: 245, 158, 11;
+  --amber-dark-rgb: 217, 119, 6;
+  
+  /* Espaçamentos padrão */
+  --section-spacing: 64px;
+  --content-spacing: 32px;
+}
+
+/* Botões Premium - Estilo Cinematográfico */
+
+/* Botão Primário */
+.btn-primary,
+.btn-explorar,
+.cta-button,
+.primary-cta,
+.btn-ver-mais {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  background: linear-gradient(to right, var(--amber-primary), var(--amber-dark));
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(var(--amber-primary-rgb), 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  min-height: 48px;
+}
+
+.btn-primary::before,
+.btn-explorar::before,
+.cta-button::before,
+.primary-cta::before,
+.btn-ver-mais::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  transition: all 0.6s ease;
+  z-index: 1;
+}
+
+.btn-primary:hover,
+.btn-explorar:hover,
+.cta-button:hover,
+.primary-cta:hover,
+.btn-ver-mais:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(var(--amber-primary-rgb), 0.5);
+  filter: brightness(1.1);
+}
+
+.btn-primary:hover::before,
+.btn-explorar:hover::before,
+.cta-button:hover::before,
+.primary-cta:hover::before,
+.btn-ver-mais:hover::before {
+  left: 100%;
+}
+
+/* Botão Secundário */
+.btn-secondary,
+.btn-detalhes,
+.secondary-cta,
+.btn-join-now {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background: transparent;
+  color: var(--amber-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 999px;
+  border: 2px solid var(--amber-primary);
+  box-shadow: 0 4px 15px rgba(var(--amber-primary-rgb), 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  min-height: 48px;
+}
+
+.btn-secondary:hover,
+.btn-detalhes:hover,
+.secondary-cta:hover,
+.btn-join-now:hover {
+  background-color: rgba(var(--amber-primary-rgb), 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(var(--amber-primary-rgb), 0.3);
+}
+
+/* Selo Pronta Entrega México */
+.badge-entrega-mexico {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(135deg, var(--verde-floresta-escuro) 0%, rgba(44, 74, 59, 0.9) 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(var(--verde-floresta-escuro-rgb), 0.3);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+/* Banner Wild News */
+.wild-news-banner {
+  position: relative;
+  background: linear-gradient(135deg, var(--azul-noite-profundo) 0%, rgba(27, 46, 68, 0.8) 100%);
+  padding: 1.5rem 2rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(var(--azul-noite-profundo-rgb), 0.4);
+}
+
+.wild-news-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/Elements_UI/wild-news-pattern.png') repeat;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.wild-news-banner .wild-news-title {
+  position: relative;
+  color: var(--dourado-trilha);
+  margin: 0;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+/* Cards de Depoimentos Estilo Cartão Postal */
+.testimonial-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(var(--azul-noite-profundo-rgb), 0.8) 0%, rgba(var(--preto-intenso-rgb), 0.9) 100%);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: url('../images/Elements_UI/stamp-icon.png') no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 2;
+}
+
+.quote-mark {
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--dourado-trilha);
+  opacity: 0.6;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+}
+
+.quote {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.author {
+  font-size: 0.9rem;
+  color: var(--dourado-trilha);
+  font-weight: 600;
+  font-style: italic;
+  text-align: right;
+}
+
+.badge-entrega-mexico::before {
+  content: '🇲🇽';
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Ícones de redes sociais */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--azul-noite-profundo) 0%, rgba(27, 46, 68, 0.8) 100%);
+  color: var(--dourado-trilha);
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(var(--azul-noite-profundo-rgb), 0.3);
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(var(--dourado-trilha-rgb), 0.4);
+  color: #fff;
+  background: linear-gradient(135deg, var(--dourado-trilha) 0%, rgba(198, 147, 58, 0.8) 100%);
+}
+
+/* Ícone de carrinho estilo mochila */
+.cart-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  color: var(--dourado-trilha);
+  transition: all 0.3s ease;
+}
+
+.cart-icon button {
+  background: transparent !important;
+  border: none !important;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.cart-icon button:hover {
+  background: rgba(245, 158, 11, 0.1) !important;
+  transform: translateY(-2px);
+}
+
+.cart-icon .cart-count {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: var(--dourado-trilha) !important;
+  color: var(--preto-intenso) !important;
+  font-size: 11px !important;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Banner Wild News */
+.wild-news-banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(27, 46, 68, 0.8) 0%, rgba(44, 74, 59, 0.8) 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.wild-news-banner::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-image: url('../images/Elements_UI/banner_wildnews.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+}
+
+.wild-news-banner h2 {
+  position: relative;
+  color: var(--dourado-trilha);
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Card de depoimento estilo cartão postal */
+.testimonial-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(var(--azul-noite-profundo-rgb), 0.9) 0%, rgba(var(--verde-floresta-escuro-rgb), 0.9) 100%);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1rem 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background-image: url('../images/Elements_UI/card_depoimento.png');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+}
+
+.testimonial-card .quote {
+  position: relative;
+  font-style: italic;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+}
+
+.testimonial-card .author {
+  color: var(--dourado-trilha);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-card .author::before {
+  content: '—';
+  margin-right: 0.5rem;
+}
+
+/* Toggle de Dark Mode tribal */
+.theme-toggle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--azul-noite-profundo) 0%, rgba(27, 46, 68, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(var(--dourado-trilha-rgb), 0.4);
+}
+
+.theme-toggle svg {
+  width: 24px;
+  height: 24px;
+  color: var(--dourado-trilha);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+  color: #fff;
+}
+
+/* Seta voltar estilo trilha */
+.back-arrow {
+  display: inline-flex;
+  align-items: center;
+  color: var(--dourado-trilha);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.back-arrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  background-image: url('../images/Elements_UI/seta_voltar.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s ease;
+}
+
+.back-arrow:hover {
+  color: #fff;
+  transform: translateX(-5px);
+}
+
+.back-arrow:hover::before {
+  transform: translateX(-3px);
+}

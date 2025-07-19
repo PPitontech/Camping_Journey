@@ -1,0 +1,187 @@
+/* Asset Fixes CSS - Replace missing images with placeholders */
+
+/* Fix for missing product images */
+img[src="images/products/water-filter.webp"],
+img[src="images/products/product1.jpg"],
+img[src="images/product-placeholder.jpg"] {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #1a1a1a);
+  min-height: 200px;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img[src="images/products/water-filter.webp"]::after,
+img[src="images/products/product1.jpg"]::after,
+img[src="images/product-placeholder.jpg"]::after {
+  content: "🏕️ Product Image";
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  text-align: center;
+}
+
+/* Fix for missing testimonial images */
+img[src="images/testimonials/person-1.jpg"],
+img[src="images/testimonials/person-3.jpg"] {
+  background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+  border-radius: 50%;
+  min-height: 80px;
+  min-width: 80px;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img[src="images/testimonials/person-1.jpg"]::after,
+img[src="images/testimonials/person-3.jpg"]::after {
+  content: "👤";
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+}
+
+/* Fix for missing community images */
+img[src="images/community-1.jpg"],
+img[src="images/community-2.jpg"],
+img[src="images/community-3.jpg"],
+img[src="images/community-4.jpg"] {
+  background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+  min-height: 120px;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img[src="images/community-1.jpg"]::after,
+img[src="images/community-2.jpg"]::after,
+img[src="images/community-3.jpg"]::after,
+img[src="images/community-4.jpg"]::after {
+  content: "🌲 Community";
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  text-align: center;
+}
+
+/* Fix for missing news images */
+img[src="images/news-placeholder.jpg"] {
+  background: linear-gradient(135deg, #2a2a2a, #4a4a4a);
+  min-height: 180px;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img[src="images/news-placeholder.jpg"]::after {
+  content: "📰 News Image";
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  text-align: center;
+}
+
+/* Fix for missing story image */
+img[src="images/story-image.jpg"] {
+  background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+  min-height: 300px;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img[src="images/story-image.jpg"]::after {
+  content: "🏔️ Adventure Story";
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+}
+
+/* Fix for missing telegram icon */
+img[src="images/telegram-icon.svg"] {
+  background-color: #0088cc;
+  border-radius: 50%;
+  min-height: 40px;
+  min-width: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img[src="images/telegram-icon.svg"]::after {
+  content: "📱";
+  color: white;
+  font-size: 20px;
+  position: absolute;
+}
+
+/* Fix for missing payment methods image */
+img[src="images/payment-methods.png"] {
+  background: linear-gradient(90deg, #2a2a2a, #3a3a3a, #2a2a2a);
+  min-height: 30px;
+  min-width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img[src="images/payment-methods.png"]::after {
+  content: "💳 Payment Methods";
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  text-align: center;
+}
+
+/* Fix for missing hero fallback */
+img[src="images/hero-bg-fallback.jpg"] {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #1a1a1a);
+  min-height: 100vh;
+  object-fit: cover;
+}
+
+/* Error handling for broken images */
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+/* Smooth transitions for image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img:not([src]),
+img[src=""] {
+  opacity: 0;
+}
+
+/* Loading placeholder animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.image-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}

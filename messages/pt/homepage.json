@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "title": "Camping Journey Equipaments MX | Equipamentos Premium para Outdoor",
+    "description": "Descubra equipamentos minimalistas premium para suas próximas aventuras ao ar livre. Entrega rápida no México e dropshipping internacional disponível. Junte-se à nossa comunidade de entusiastas do ar livre.",
+    "keywords": "equipamentos de camping, equipamentos outdoor, camping minimalista, camping méxico, equipamentos premium para ar livre, equipamentos de aventura"
+  },
+  "nav": {
+    "items": "Produtos",
+    "readyStock": "Estoque Local",
+    "newArrivals": "Lançamentos",
+    "wildNews": "Wild News",
+    "ourStory": "Nossa História",
+    "community": "Comunidade"
+  },
+  "hero": {
+    "title": "ABRACE A NATUREZA",
+    "subtitle": "Equipamentos Premium para Jornadas Inesquecíveis",
+    "cta": "Explorar Coleção",
+    "adventureTitle": "Você está <em>PRONTO</em> para a <em>MAIOR AVENTURA</em> da sua vida?"
+  },
+  "localStock": {
+    "title": "ENTREGA RÁPIDA NO MÉXICO",
+    "subtitle": "Equipamentos Premium Prontos para Envio",
+    "description": "Itens essenciais para outdoor selecionados à mão disponíveis para entrega imediata em todo o México. Receba seu equipamento de aventura em apenas 1-3 dias.",
+    "cta": "Comprar Estoque Local"
+  },
+  "dropshipping": {
+    "title": "LANÇAMENTOS OUTDOOR",
+    "subtitle": "Coleção Global Curada",
+    "description": "Descubra nossos equipamentos internacionais cuidadosamente selecionados. Peças únicas para o aventureiro moderno com envio mundial.",
+    "cta": "Explorar Coleção Global"
+  },
+  "testimonials": {
+    "title": "HISTÓRIAS DE AVENTUREIROS",
+    "subtitle": "Junte-se à Nossa Comunidade de Exploradores",
+    "testimonial1": {
+      "text": "A mochila ultralight mudou completamente minhas trilhas urbanas. Super resistente e o tamanho perfeito para escapadas de fim de semana na Sierra Madre!",
+      "name": "Carlos Mendoza",
+      "location": "Cidade do México",
+      "product": "Mochila Ultralight 45L"
+    },
+    "testimonial2": {
+      "text": "Levamos a barraca para Pátzcuaro com as crianças. Montagem super fácil e resistiu à chuva perfeitamente. Qualidade excepcional!",
+      "name": "Maria & José Santos",
+      "location": "Guadalajara, Jalisco",
+      "product": "Barraca Ultralight 2P"
+    },
+    "testimonial3": {
+      "text": "Sleeping bag perfeito para as temperaturas do Pico de Orizaba. Compacto, leve e me manteve aquecido a -5°C. Investimento que vale cada peso!",
+      "name": "Roberto Garza",
+      "location": "Monterrey, Nuevo León",
+      "product": "Sleeping Bag Premium"
+    },
+    "testimonial4": {
+      "text": "Kit de cozinha portátil salvou nossa lua de mel em Tulum! Fogareiro acendeu na primeira tentativa mesmo com vento. Design inteligente e funcional.",
+      "name": "Ana & Diego López",
+      "location": "Cancún, Quintana Roo",
+      "product": "Kit Cozinha Compacto"
+    },
+    "testimonial5": {
+      "text": "Como mochileira solo, o filtro de água me deu total segurança nas trilhas de Puebla. Água cristalina de qualquer fonte. Indispensável!",
+      "name": "Sofía Hernández",
+      "location": "Puebla, Puebla",
+      "product": "Filtro de Água Portátil"
+    },
+    "testimonial6": {
+      "text": "Lanterna tática foi essencial no nosso acampamento em Ensenada. Bateria durou o fim de semana todo e iluminou perfeitamente todo o acampamento!",
+      "name": "Grupo Aventureros TJ",
+      "location": "Tijuana, Baja California",
+      "product": "Lanterna Tática LED"
+    }
+  },
+  "community": {
+    "title": "🎒 JUNTE-SE À COMUNIDADE DE AVENTUREIROS",
+    "subtitle": "Acesso exclusivo a ofertas, guias secretos e uma comunidade apaixonada por aventuras",
+    "benefit1": {
+      "title": "Ofertas Exclusivas",
+      "text": "Descontos especiais só para membros"
+    },
+    "benefit2": {
+      "title": "Trilhas Secretas",
+      "text": "Roteiros exclusivos no México"
+    },
+    "benefit3": {
+      "title": "Sorteios Mensais",
+      "text": "Equipamentos grátis todo mês"
+    },
+    "benefit4": {
+      "title": "Meetups Locais",
+      "text": "Encontros e expedições organizadas"
+    },
+    "socialLabel": "Siga nossas aventuras:",
+    "newsletter": {
+      "title": "Aventuras Exclusivas",
+      "subtitle": "Receba ofertas especiais e guias secretos direto no seu email",
+      "placeholder": "seu-email@exemplo.com",
+      "button": "ENTRAR NA JORNADA",
+      "privacy": "Sem spam. Apenas aventuras épicas. 🏔️"
+    },
+    "telegram": {
+      "label": "ENTRAR NO TELEGRAM",
+      "subtitle": "Grupo VIP • Grátis"
+    },
+    "socialProof": "Junte-se a <span class=\"member-count\">5.0K+</span> aventureiros",
+    "stats": {
+      "members": "Aventureiros",
+      "adventures": "Aventuras",
+      "satisfaction": "Satisfação"
+    }
+  },
+  "wildNews": {
+    "title": "NOTÍCIAS SELVAGENS",
+    "subtitle": "Histórias da Natureza",
+    "description": "Mergulhe em histórias cativantes ao ar livre, análises de especialistas sobre equipamentos e guias de aventura de todo o mundo.",
+    "cta": "Ler Últimas Histórias",
+    "latestPosts": "Últimas Publicações"
+  },
+  "newsletter": {
+    "title": "MANTENHA-SE CONECTADO",
+    "description": "Inscreva-se para receber atualizações sobre novos equipamentos, ofertas exclusivas e inspiração para aventuras.",
+    "placeholder": "Seu endereço de email",
+    "button": "Inscrever-se",
+    "privacyNote": "Respeitamos sua privacidade. Cancele sua inscrição a qualquer momento."
+  },
+  "footer": {
+    "company": "Empresa",
+    "about": "Sobre Nós",
+    "contact": "Contato",
+    "careers": "Carreiras",
+    "shop": "Loja",
+    "newArrivals": "Novidades",
+    "bestSellers": "Mais Vendidos",
+    "localStock": "Entrega Rápida no México",
+    "global": "Coleção Global",
+    "support": "Suporte",
+    "shipping": "Envio e Devoluções",
+    "faq": "Perguntas Frequentes",
+    "trackOrder": "Rastrear Pedido",
+    "legal": "Legal",
+    "terms": "Termos e Condições",
+    "privacy": "Política de Privacidade",
+    "cookies": "Política de Cookies",
+    "copyright": "© 2025 Camping Journey Equipaments MX. Todos os direitos reservados."
+  },
+  "menu": {
+    "profile": "Perfil",
+    "navigation": "Navegação",
+    "settings": "Configurações",
+    "security": "Segurança",
+    "support": "Suporte",
+    "company": "Empresa",
+    "login": "Login / Cadastro",
+    "account": "Minha Conta",
+    "orders": "Meus Pedidos",
+    "wishlist": "Lista de Desejos",
+    "language": "Idioma",
+    "theme": "Tema",
+    "notifications": "Notificações",
+    "currency": "Moeda",
+    "changePassword": "Alterar Senha",
+    "twoFactor": "Autenticação 2FA",
+    "activeSessions": "Sessões Ativas",
+    "privacy": "Política de Privacidade",
+    "faq": "FAQ",
+    "contact": "Contato",
+    "tracking": "Rastrear Pedido",
+    "returns": "Devoluções e Garantia",
+    "about": "Sobre Nós",
+    "sustainability": "Sustentabilidade",
+    "careers": "Carreiras",
+    "press": "Imprensa",
+    "copyright": "© 2024 Camping Journey MX"
+  }
+}

@@ -1,0 +1,58 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /index.html
+Allow: /wild-news.html
+Allow: /wild-news/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /videos/
+
+# Block development files
+Disallow: /src/
+Disallow: /config/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.ts$
+Disallow: /*.tsx$
+Disallow: /package.json
+Disallow: /tsconfig.json
+Disallow: /vercel.json
+
+# Block sensitive files
+Disallow: /.env
+Disallow: /.env.*
+Disallow: /README.md
+
+# Sitemap location
+Sitemap: https://camping-journey.com.mx/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Block malicious bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: / 

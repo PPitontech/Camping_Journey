@@ -1,0 +1,97 @@
+/**
+ * Cinematic Layout CSS - Camping Journey Equipaments MX
+ * Enhanced spacing and dividers for premium cinematic look
+ */
+
+/* Section Spacing */
+section {
+  padding: var(--section-spacing) 0;
+  position: relative;
+}
+
+/* Subtle Section Dividers */
+section:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, 
+    rgba(0,0,0,0), 
+    rgba(245, 158, 11, 0.3), 
+    rgba(0,0,0,0)
+  );
+}
+
+/* Enhanced Container Spacing */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section Headers with Premium Styling */
+.section-header {
+  margin-bottom: calc(var(--content-spacing) * 1.5);
+  position: relative;
+}
+
+.featured-title,
+.section-title,
+.testimonials-title,
+.wild-news-title {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.featured-title::after,
+.section-title::after,
+.testimonials-title::after,
+.wild-news-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, var(--amber-primary), var(--amber-dark));
+  border-radius: 3px;
+}
+
+/* Enhanced Grid Spacing */
+.product-grid,
+.testimonial-grid,
+.news-grid {
+  gap: var(--content-spacing);
+}
+
+/* Enhanced Card Spacing */
+.product-card,
+.testimonial-card,
+.news-card {
+  margin-bottom: var(--content-spacing);
+}
+
+/* Enhanced Vertical Rhythm */
+p + p {
+  margin-top: 1rem;
+}
+
+h2 + p {
+  margin-top: 1.5rem;
+}
+
+/* Enhanced Mobile Spacing */
+@media (max-width: 768px) {
+  section {
+    padding: calc(var(--section-spacing) * 0.75) 0;
+  }
+  
+  .section-header {
+    margin-bottom: var(--content-spacing);
+  }
+}

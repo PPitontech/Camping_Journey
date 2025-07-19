@@ -1,0 +1,94 @@
+/**
+ * Cinematic Loader CSS - Camping Journey Equipaments MX
+ * Estilos para o efeito de carregamento cinematográfico
+ */
+
+.cinematic-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--night-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.cinematic-loader.loaded {
+  opacity: 0;
+}
+
+.loader-content {
+  text-align: center;
+  color: var(--cloud-white);
+  max-width: 300px;
+}
+
+.loader-logo {
+  margin-bottom: 2rem;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.loader-logo svg {
+  color: var(--accent-color);
+  filter: drop-shadow(0 0 10px rgba(var(--accent-color-rgb), 0.6));
+}
+
+.loader-progress {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.loader-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-color-secondary) 100%);
+  transition: width 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  animation: shimmer 1.5s infinite;
+}
+
+.loader-text {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+/* Animação para a página quando o loader termina */
+body {
+  opacity: 0.8;
+  transition: opacity 1s ease-out;
+}
+
+body.page-loaded {
+  opacity: 1;
+}
+
+/* Animação para o logo */
+@keyframes logoRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

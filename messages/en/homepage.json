@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "Camping Journey Equipaments MX | Premium Outdoor Gear",
+    "description": "Discover premium, minimalist outdoor gear for your next adventure. Fast shipping in Mexico and international dropshipping available. Join our community of outdoor enthusiasts.",
+    "keywords": "camping gear, outdoor equipment, minimalist camping, mexico camping, premium outdoor gear, adventure equipment"
+  },
+  "hero": {
+    "title": "EMBRACE THE WILD",
+    "subtitle": "Curated gear to explore Mexico with style and freedom.",
+    "exploreButton": "Explore Gear",
+    "newArrivalsButton": "See New Arrivals",
+    "adventureTitle": "ARE YOU <strong>READY</strong> FOR THE <strong>GREATEST ADVENTURE</strong> OF YOUR LIFE?"
+  },
+  "localStock": {
+    "title": "MEXICO FAST DELIVERY",
+    "subtitle": "Premium Gear Ready to Ship",
+    "description": "Handpicked outdoor essentials available for immediate delivery across Mexico. Get your adventure gear in just 1-3 days.",
+    "cta": "Shop Local Stock",
+    "shipping": "Express delivery 1-3 business days"
+  },
+  "dropshipping": {
+    "title": "OUTDOOR LAUNCHES",
+    "subtitle": "Global Curated Collection",
+    "description": "Discover our carefully selected international gear. Unique pieces for the modern adventurer with worldwide shipping.",
+    "cta": "Explore Global Collection",
+    "shipping": "International delivery in up to 15 days"
+  },
+  "testimonials": {
+    "title": "ADVENTURER STORIES",
+    "subtitle": "Join Our Community of Explorers"
+  },
+  "community": {
+    "title": "JOIN THE JOURNEY",
+    "subtitle": "Connect with Fellow Adventurers",
+    "description": "Join our exclusive Telegram group and get access to:",
+    "benefit1": "Exclusive member offers",
+    "benefit2": "Trail tips and secret destinations",
+    "benefit3": "Monthly gear giveaways",
+    "benefit4": "Organized meetups and expeditions",
+    "joinButton": "Join Telegram Community",
+    "followTitle": "Follow Our Adventures",
+    "cta": "Join Telegram Community"
+  },
+  "wildNews": {
+    "title": "WILD NEWS",
+    "subtitle": "Inspiring stories, adventure tips, and outdoor world news",
+    "description": "Immerse yourself in captivating outdoor stories, expert gear reviews, and adventure guides from around the world.",
+    "cta": "Read Latest Stories",
+    "latestPosts": "Latest Posts",
+    "viewAll": "View All Posts"
+  },
+  "newsletter": {
+    "title": "STAY CONNECTED",
+    "description": "Subscribe to receive updates on new gear, exclusive offers, and adventure inspiration.",
+    "placeholder": "Your email address",
+    "button": "Subscribe",
+    "privacyNote": "We respect your privacy. Unsubscribe at any time."
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "category": {
+      "survival": "Survival",
+      "relaxation": "Relaxation"
+    },
+    "tent": {
+      "title": "Ultralight Tent",
+      "description": "Lightweight and compact tent for 2 people, ideal for trails.",
+      "alt": "Ultralight Tent"
+    },
+    "survivalKit": {
+      "title": "15-in-1 Survival Kit",
+      "description": "Essential tools for outdoor emergencies, including multitool, compass and first aid kit."
+    },
+    "hammock": {
+      "title": "Ultracompact Portable Hammock",
+      "description": "Camping hammock that supports up to 180kg and weighs only 300g. Ideal for any adventure."
+    },
+    "badge": {
+      "readyDelivery": "READY TO SHIP",
+      "new": "New"
+    }
+  },
+  "community": {
+    "joinTitle": "Join Our Community",
+    "connectDescription": "Connect with other adventurers, share your experiences and get exclusive access to new products and special offers."
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "customerSupport": "Customer Support",
+    "legalHeading": "Legal",
+    "company": "Company",
+    "about": "About Us",
+    "contact": "Contact",
+    "careers": "Careers",
+    "shop": "Shop",
+    "newArrivals": "New Arrivals",
+    "bestSellers": "Best Sellers",
+    "localStock": "Mexico Fast Delivery",
+    "global": "Global Collection",
+    "support": "Support",
+    "shipping": "Shipping & Returns",
+    "faq": "FAQ",
+    "trackOrder": "Track Order",
+    "legalSection": "Legal",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "copyright": "© 2025 Camping Journey Equipaments MX. All rights reserved."
+  }
+}

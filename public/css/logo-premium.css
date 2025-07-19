@@ -1,0 +1,53 @@
+/* Logo Premium CSS - Enhanced cinematographic logo styling */
+
+/* Logo container styling */
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 32px 0 16px 0;
+}
+
+/* Logo image styling - direct on img */
+.main-logo {
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+  max-width: 95vw;
+  filter: drop-shadow(0 0 72px rgba(245, 158, 11, 0.35));
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+  z-index: 20;
+  position: relative;
+}
+
+.main-logo:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .header-logo {
+    padding-top: 24px;
+    padding-bottom: 12px;
+  }
+  
+  .main-logo {
+    width: 300px;
+    filter: drop-shadow(0 0 48px rgba(245, 158, 11, 0.3));
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .header-logo {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .main-logo {
+    width: 220px;
+  }
+}

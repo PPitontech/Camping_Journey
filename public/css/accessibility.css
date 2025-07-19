@@ -1,0 +1,121 @@
+/**
+ * Accessibility CSS - Camping Journey Equipaments MX
+ * Ensuring premium design is accessible to all users
+ */
+
+/* Focus Styles */
+:focus {
+  outline: 3px solid var(--amber-primary);
+  outline-offset: 3px;
+}
+
+/* Skip to content link - visible on focus */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--amber-primary);
+  color: white;
+  padding: 8px 16px;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Enhanced text contrast */
+.hero-title,
+.section-title,
+.featured-title,
+.testimonials-title,
+.wild-news-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Ensure sufficient color contrast */
+.btn-secondary {
+  color: #d97706; /* Darker amber for better contrast on dark backgrounds */
+}
+
+/* Improved focus visibility for interactive elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--amber-primary);
+  outline-offset: 3px;
+}
+
+/* Ensure text remains visible during webfont load */
+html {
+  font-display: swap;
+}
+
+/* Improved tap targets for mobile */
+@media (max-width: 768px) {
+  button,
+  .btn-primary,
+  .btn-secondary,
+  .btn-explorar,
+  .btn-detalhes,
+  .nav-link,
+  .social-icon,
+  .cart-icon {
+    min-height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Improved spacing for touch targets */
+  .nav-list li {
+    margin-bottom: 12px;
+  }
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .scroll-indicator {
+    animation: none !important;
+  }
+}
+
+/* High contrast mode improvements */
+@media (forced-colors: active) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-explorar,
+  .btn-detalhes {
+    border: 2px solid currentColor;
+  }
+  
+  img {
+    border: 1px solid currentColor;
+  }
+}

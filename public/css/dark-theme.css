@@ -1,0 +1,216 @@
+/* Dark Theme CSS - Additional dark mode styles */
+
+/* Dark theme variables */
+:root {
+  --dark-bg-primary: #0a0a0a;
+  --dark-bg-secondary: #1a1a1a;
+  --dark-bg-tertiary: #2a2a2a;
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #cccccc;
+  --dark-text-muted: #999999;
+  --dark-accent: #f59e0b;
+  --dark-accent-hover: #d97706;
+  --dark-border: #333333;
+  --dark-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark theme body styles */
+body.dark-theme {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark theme header */
+body.dark-theme header {
+  background-color: var(--dark-bg-secondary);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+/* Dark theme navigation */
+body.dark-theme nav a {
+  color: var(--dark-text-secondary);
+  transition: color 0.3s ease;
+}
+
+body.dark-theme nav a:hover {
+  color: var(--dark-accent);
+}
+
+/* Dark theme buttons */
+body.dark-theme .btn-primary {
+  background-color: var(--dark-accent);
+  border-color: var(--dark-accent);
+  color: var(--dark-bg-primary);
+}
+
+body.dark-theme .btn-primary:hover {
+  background-color: var(--dark-accent-hover);
+  border-color: var(--dark-accent-hover);
+}
+
+body.dark-theme .btn-secondary {
+  background-color: var(--dark-bg-tertiary);
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+body.dark-theme .btn-secondary:hover {
+  background-color: var(--dark-border);
+}
+
+/* Dark theme cards */
+body.dark-theme .card {
+  background-color: var(--dark-bg-secondary);
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+body.dark-theme .product-card {
+  background-color: var(--dark-bg-secondary);
+  border: 1px solid var(--dark-border);
+  box-shadow: 0 4px 8px var(--dark-shadow);
+}
+
+body.dark-theme .product-card:hover {
+  border-color: var(--dark-accent);
+  box-shadow: 0 8px 16px var(--dark-shadow);
+}
+
+/* Dark theme testimonials */
+body.dark-theme .testimonial-card {
+  background-color: var(--dark-bg-secondary);
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+/* Dark theme forms */
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+  background-color: var(--dark-bg-tertiary);
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+body.dark-theme input:focus,
+body.dark-theme textarea:focus,
+body.dark-theme select:focus {
+  border-color: var(--dark-accent);
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+/* Dark theme footer */
+body.dark-theme footer {
+  background-color: var(--dark-bg-secondary);
+  border-top: 1px solid var(--dark-border);
+  color: var(--dark-text-secondary);
+}
+
+body.dark-theme footer a {
+  color: var(--dark-text-secondary);
+}
+
+body.dark-theme footer a:hover {
+  color: var(--dark-accent);
+}
+
+/* Dark theme sections */
+body.dark-theme section {
+  background-color: var(--dark-bg-primary);
+}
+
+body.dark-theme .section-alt {
+  background-color: var(--dark-bg-secondary);
+}
+
+/* Dark theme text elements */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: var(--dark-text-primary);
+}
+
+body.dark-theme p {
+  color: var(--dark-text-secondary);
+}
+
+body.dark-theme .text-muted {
+  color: var(--dark-text-muted);
+}
+
+/* Dark theme hero section */
+body.dark-theme .hero {
+  background-color: var(--dark-bg-primary);
+}
+
+body.dark-theme .hero-content {
+  color: var(--dark-text-primary);
+}
+
+/* Dark theme newsletter */
+body.dark-theme .newsletter {
+  background-color: var(--dark-bg-secondary);
+  border: 1px solid var(--dark-border);
+}
+
+/* Dark theme loading states */
+body.dark-theme .loading {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-muted);
+}
+
+/* Dark theme scrollbar */
+body.dark-theme::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark-theme::-webkit-scrollbar-track {
+  background: var(--dark-bg-secondary);
+}
+
+body.dark-theme::-webkit-scrollbar-thumb {
+  background: var(--dark-bg-tertiary);
+  border-radius: 4px;
+}
+
+body.dark-theme::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-border);
+}
+
+/* Dark theme animations */
+body.dark-theme .fade-in {
+  animation: fadeInDark 0.5s ease-in-out;
+}
+
+@keyframes fadeInDark {
+  from {
+    opacity: 0;
+    background-color: var(--dark-bg-primary);
+  }
+  to {
+    opacity: 1;
+    background-color: var(--dark-bg-secondary);
+  }
+}
+
+/* Dark theme responsive adjustments */
+@media (max-width: 768px) {
+  body.dark-theme .mobile-menu {
+    background-color: var(--dark-bg-secondary);
+    border: 1px solid var(--dark-border);
+  }
+  
+  body.dark-theme .mobile-menu-item {
+    color: var(--dark-text-secondary);
+    border-bottom: 1px solid var(--dark-border);
+  }
+  
+  body.dark-theme .mobile-menu-item:hover {
+    background-color: var(--dark-bg-tertiary);
+    color: var(--dark-accent);
+  }
+} 

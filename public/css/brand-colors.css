@@ -1,0 +1,150 @@
+/**
+ * Brand Colors - Camping Journey Equipaments MX
+ * Paleta de cores extraída do logo oficial
+ */
+
+:root {
+  /* Cores primárias */
+  --yellow-trail: #E8A645;
+  --blue-mountain: #36526B;
+  --green-forest: #4A6C53;
+  --orange-sand: #D1813F;
+  --night-black: #111111;
+  --cloud-white: #F8F8F8;
+  
+  /* Variações para gradientes e efeitos */
+  --yellow-trail-light: #f4c278;
+  --yellow-trail-dark: #c68a35;
+  --blue-mountain-light: #476d8e;
+  --blue-mountain-dark: #2a4054;
+  --green-forest-light: #5d8668;
+  --green-forest-dark: #3a543f;
+  --orange-sand-light: #e09a5e;
+  --orange-sand-dark: #b06a2f;
+  
+  /* Cores de sobreposição para efeitos cinematográficos */
+  --overlay-dark: rgba(17, 17, 17, 0.7);
+  --overlay-blue: rgba(54, 82, 107, 0.6);
+  --overlay-green: rgba(74, 108, 83, 0.6);
+  
+  /* Cores para modo escuro (padrão) */
+  --bg-color: var(--night-black);
+  --bg-color-secondary: #1a1a1a;
+  --text-color: var(--cloud-white);
+  --text-muted: rgba(248, 248, 248, 0.7);
+  --accent-color: var(--green-forest);
+  --accent-color-secondary: var(--orange-sand);
+  --border-color: rgba(248, 248, 248, 0.1);
+  
+  /* Sombras e efeitos */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+  --glow-accent: 0 0 15px rgba(74, 108, 83, 0.5);
+  --glow-accent-secondary: 0 0 15px rgba(209, 129, 63, 0.5);
+}
+
+/* Modo claro */
+[data-theme="light"] {
+  --bg-color: var(--cloud-white);
+  --bg-color-secondary: #f0f0f0;
+  --text-color: var(--night-black);
+  --text-muted: rgba(17, 17, 17, 0.7);
+  --border-color: rgba(17, 17, 17, 0.1);
+  
+  /* Sombras para modo claro */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Classes de utilidade para cores */
+.bg-yellow-trail { background-color: var(--yellow-trail); }
+.bg-blue-mountain { background-color: var(--blue-mountain); }
+.bg-green-forest { background-color: var(--green-forest); }
+.bg-orange-sand { background-color: var(--orange-sand); }
+.bg-night-black { background-color: var(--night-black); }
+.bg-cloud-white { background-color: var(--cloud-white); }
+
+.text-yellow-trail { color: var(--yellow-trail); }
+.text-blue-mountain { color: var(--blue-mountain); }
+.text-green-forest { color: var(--green-forest); }
+.text-orange-sand { color: var(--orange-sand); }
+.text-night-black { color: var(--night-black); }
+.text-cloud-white { color: var(--cloud-white); }
+
+/* Gradientes cinematográficos */
+.gradient-mountain {
+  background: linear-gradient(135deg, var(--blue-mountain-dark), var(--blue-mountain), var(--blue-mountain-light));
+}
+
+.gradient-forest {
+  background: linear-gradient(135deg, var(--green-forest-dark), var(--green-forest), var(--green-forest-light));
+}
+
+.gradient-sunset {
+  background: linear-gradient(135deg, var(--orange-sand), var(--yellow-trail));
+}
+
+.gradient-night {
+  background: linear-gradient(135deg, var(--night-black), var(--blue-mountain-dark));
+}
+
+/* Sobreposições para imagens e vídeos */
+.overlay-dark {
+  position: relative;
+}
+
+.overlay-dark::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-dark);
+  z-index: 1;
+}
+
+.overlay-blue {
+  position: relative;
+}
+
+.overlay-blue::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-blue);
+  z-index: 1;
+}
+
+.overlay-green {
+  position: relative;
+}
+
+.overlay-green::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-green);
+  z-index: 1;
+}
+
+/* Efeitos de brilho para elementos interativos */
+.glow-on-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-on-hover:hover {
+  box-shadow: var(--glow-accent);
+}
+
+.glow-orange-on-hover:hover {
+  box-shadow: var(--glow-accent-secondary);
+}

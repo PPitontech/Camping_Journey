@@ -1,0 +1,234 @@
+/* Header Cleanup CSS - Remove overlays and fix z-index issues */
+
+/* Ensure all header elements have proper z-index */
+.site-header * {
+  z-index: 10;
+  position: relative;
+}
+
+/* Hide any debug, test or overlay elements */
+#floating-icons, 
+.overlay-debug, 
+.devtool-buttons,
+.bottom-bar,
+.send-icon-overlay,
+.debug-element,
+.test-overlay,
+.duplicate-cart,
+.duplicate-nav,
+.floating-cart,
+.floating-nav,
+.vic-assistant,
+.vic-tooltip,
+.vic-modal {
+  display: none !important;
+}
+
+/* Hide any duplicate cart icons that might appear */
+.cart-icon:nth-of-type(n+2),
+.cart-count:nth-of-type(n+2) {
+  display: none !important;
+}
+
+/* Hide any duplicate navigation elements */
+.nav-list:nth-of-type(n+2),
+.main-nav:nth-of-type(n+2) {
+  display: none !important;
+}
+
+/* Hide duplicate chart elements */
+#revenue-chart:nth-of-type(n+2),
+#roas-chart:nth-of-type(n+2),
+#cpa-chart:nth-of-type(n+2),
+#conversion-chart:nth-of-type(n+2),
+#traffic-chart:nth-of-type(n+2),
+#performance-chart:nth-of-type(n+2) {
+  display: none !important;
+}
+
+/* Hide duplicate chart containers */
+.chart-container:nth-of-type(n+2),
+.kpi-chart:nth-of-type(n+2),
+.dashboard-chart:nth-of-type(n+2) {
+  display: none !important;
+}
+
+/* Hide duplicate canvas elements */
+canvas:nth-of-type(n+2) {
+  display: none !important;
+}
+
+/* Fix chart container positioning */
+.chart-container,
+.kpi-chart,
+.dashboard-chart {
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+}
+
+/* Ensure chart canvases are properly positioned */
+canvas {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Ensure proper z-index layering for header elements */
+.header-logo {
+  z-index: 20;
+}
+
+.logo-circle {
+  z-index: 20;
+}
+
+.main-nav {
+  z-index: 15;
+}
+
+.header-controls {
+  z-index: 15;
+}
+
+/* Remove any potential floating elements */
+body::after,
+body::before,
+.site-header::after,
+.site-header::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Hide any elements that might be causing chart duplications */
+.duplicate-chart,
+.floating-chart,
+.overlay-chart {
+  display: none !important;
+}
+
+/* Fix any chart-related layout issues */
+.chart-wrapper {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Prevent chart containers from overlapping */
+.chart-container + .chart-container,
+.kpi-chart + .kpi-chart,
+.dashboard-chart + .dashboard-chart {
+  margin-top: 1rem !important;
+}
+
+/* Ensure charts don't interfere with header */
+.chart-container,
+.kpi-chart,
+.dashboard-chart {
+  margin-top: 0 !important;
+  clear: both !important;
+}
+
+/* Hide any Chart.js tooltip duplicates */
+.chartjs-tooltip:nth-of-type(n+2) {
+  display: none !important;
+}
+
+/* Fix any potential z-index conflicts with charts */
+.chart-container canvas,
+.kpi-chart canvas,
+.dashboard-chart canvas {
+  z-index: 1 !important;
+  position: relative !important;
+}
+
+/* Ensure footer doesn't have duplicate controls */
+.main-footer .cart-icon,
+.main-footer .vic-assistant,
+.main-footer .theme-toggle {
+  display: none !important;
+}
+
+/* Fix any potential absolute positioned elements */
+[style*="position: absolute"] {
+  z-index: 5;
+}
+
+/* Ensure tooltips don't cause layout issues */
+.tooltip {
+  z-index: 100;
+}
+
+/* Ensure only one header is visible */
+.site-header:nth-of-type(n+2) {
+  display: none !important;
+}
+
+/* Hide any floating or duplicate elements */
+.floating-element,
+.duplicate-element,
+[class*="duplicate-"],
+[class*="floating-"] {
+  display: none !important;
+}
+
+/* Ensure clean header layout */
+.header-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fix any potential layout issues */
+.header-top-row {
+  position: relative;
+  z-index: 10;
+}
+
+.header-logo {
+  position: relative;
+  z-index: 20;
+}
+
+/* Clean up any potential pseudo-elements causing duplicates */
+.cart-icon::before,
+.cart-icon::after {
+  display: none !important;
+}
+
+.nav-link::before {
+  z-index: 1;
+}
+
+.nav-link::after {
+  z-index: 2;
+}
+
+/* Ensure cart icon has clean styling */
+.cart-icon {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.cart-icon button {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Hide any unwanted gray balls or circles */
+.cart-icon::before,
+.cart-icon::after,
+.cart-icon button::before,
+.cart-icon button::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Ensure only the cart count badge is visible when needed */
+.cart-icon .cart-count {
+  background: #f59e0b !important;
+  color: #000 !important;
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
