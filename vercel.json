@@ -1,20 +1,10 @@
 {
   "version": 2,
   "name": "camping-journey-mx",
-  "alias": ["camping-journey.com.mx", "www.camping-journey.com.mx"],
-  "builds": [
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "public"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "source": "/(.*)",
+      "destination": "/public/$1"
     }
   ],
   "headers": [
@@ -32,19 +22,11 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
-        },
-        {
-          "key": "Strict-Transport-Security",
-          "value": "max-age=31536000; includeSubDomains"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "origin-when-cross-origin"
         }
       ]
     },
     {
-      "source": "/js/(.*)",
+      "source": "/css/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -53,7 +35,7 @@
       ]
     },
     {
-      "source": "/css/(.*)",
+      "source": "/js/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -70,9 +52,6 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/www.camping-journey.com.mx/(.*)",
-      "destination": "https://camping-journey.com
+  ]
+}
 
