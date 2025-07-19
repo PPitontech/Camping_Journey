@@ -195,9 +195,9 @@ class LanguageManager {
   changeLanguage(newLang) {
     if (newLang === this.currentLanguage) {
       this.closeDropdown();
-      return;
-    }
-
+    return;
+  }
+  
     // Save preference
     this.currentLanguage = newLang;
     localStorage.setItem('campingJourneyLanguage', newLang);
@@ -241,9 +241,9 @@ class LanguageManager {
     }
 
     // Apply translations to elements with data-i18n attributes
-    const elements = document.querySelectorAll('[data-i18n]');
-    elements.forEach(element => {
-      const key = element.getAttribute('data-i18n');
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(element => {
+    const key = element.getAttribute('data-i18n');
       const translation = this.getNestedTranslation(currentTranslations, key);
       
       if (translation) {
@@ -302,14 +302,14 @@ class LanguageManager {
       if (meta.title) {
         document.title = meta.title;
       }
-      
-      // Update meta description
+    
+    // Update meta description
       const descriptionMeta = document.querySelector('meta[name="description"]');
       if (descriptionMeta && meta.description) {
         descriptionMeta.content = meta.description;
-      }
-      
-      // Update meta keywords
+    }
+    
+    // Update meta keywords
       const keywordsMeta = document.querySelector('meta[name="keywords"]');
       if (keywordsMeta && meta.keywords) {
         keywordsMeta.content = meta.keywords;
