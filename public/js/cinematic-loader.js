@@ -41,63 +41,43 @@ class CinematicLoader {
         <div class="loader-logo">
           <!-- Mountain Logo SVG -->
           <div class="mountain-logo">
-            <svg width="280" height="180" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-              <!-- Green Mountain Curves -->
+            <svg width="280" height="180" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+              <!-- Simple Green Mountain Curves -->
               <defs>
-                <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" style="stop-color:#2E8B57;stop-opacity:1" />
-                  <stop offset="50%" style="stop-color:#228B22;stop-opacity:1" />
+                <linearGradient id="simpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#228B22;stop-opacity:1" />
                   <stop offset="100%" style="stop-color:#006400;stop-opacity:1" />
                 </linearGradient>
               </defs>
               
-              <!-- Mountain Path -->
-              <path d="M20 80 
-                       Q40 60 60 65
-                       Q80 70 100 45
-                       Q120 20 140 35
-                       Q160 50 180 55
-                       L180 90
-                       Q160 85 140 80
-                       Q120 75 100 80
-                       Q80 85 60 80
-                       Q40 75 20 80 Z" 
-                    fill="url(#mountainGradient)" 
-                    opacity="0.9">
+              <!-- Clean Mountain Silhouette -->
+              <path d="M30 120 
+                       Q60 80 90 85
+                       Q120 90 150 60
+                       Q180 30 210 45
+                       Q240 60 270 65
+                       Q270 120 270 120
+                       L30 120 Z" 
+                    fill="url(#simpleGradient)" 
+                    opacity="1">
                 <animateTransform 
                   attributeType="XML" 
                   attributeName="transform" 
                   type="scale" 
-                  values="1;1.05;1" 
-                  dur="3s" 
+                  values="1;1.02;1" 
+                  dur="4s" 
                   repeatCount="indefinite"/>
               </path>
               
-              <!-- Mountain Shadow/Base -->
-              <path d="M20 85
-                       Q40 80 60 82
-                       Q80 84 100 85
-                       Q120 86 140 85
-                       Q160 84 180 85
-                       L180 95
-                       Q160 90 140 90
-                       Q120 90 100 90
-                       Q80 90 60 90
-                       Q40 90 20 95 Z" 
-                    fill="#1a5f1a" 
-                    opacity="0.6">
-                <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite"/>
-              </path>
-              
-              <!-- Animated dots for loading effect -->
-              <circle cx="50" cy="45" r="2" fill="#32CD32" opacity="0.8">
-                <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+              <!-- Subtle loading animation dots -->
+              <circle cx="90" cy="82" r="3" fill="#32CD32" opacity="0">
+                <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0s" repeatCount="indefinite"/>
               </circle>
-              <circle cx="100" cy="30" r="2" fill="#32CD32" opacity="0.8">
-                <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+              <circle cx="150" cy="58" r="3" fill="#32CD32" opacity="0">
+                <animate attributeName="opacity" values="0;1;0" dur="2s" begin="0.7s" repeatCount="indefinite"/>
               </circle>
-              <circle cx="150" cy="40" r="2" fill="#32CD32" opacity="0.8">
-                <animate attributeName="opacity" values="0;1;0" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+              <circle cx="210" cy="43" r="3" fill="#32CD32" opacity="0">
+                <animate attributeName="opacity" values="0;1;0" dur="2s" begin="1.4s" repeatCount="indefinite"/>
               </circle>
             </svg>
           </div>
