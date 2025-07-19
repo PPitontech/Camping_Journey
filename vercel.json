@@ -84,13 +84,9 @@
     "NEXT_PUBLIC_SITE_URL": "https://camping-journey.com.mx",
     "NEXT_PUBLIC_DOMAIN": "camping-journey.com.mx"
   },
-  "functions": {
-    "public/api/*.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "github": {
     "autoDeployment": true,
     "silent": false
   }
-} 
+}
+
