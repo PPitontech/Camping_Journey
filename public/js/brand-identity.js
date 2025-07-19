@@ -15,7 +15,7 @@ class BrandIdentity {
       light: '#F8F9FA'         // Light Text
     };
 
-    this.logoPath = '/images/logo-camping-journey-clean.png';
+    this.logoPath = '/images/logo-camping-journey-clean.png?v=2';
     this.brandName = 'Camping Journey';
     this.tagline = 'Equipment to explore Mexico with style';
 
@@ -26,7 +26,7 @@ class BrandIdentity {
     this.applyBrandColors();
     this.setupLogoElements();
     this.setupBrandConsistency();
-    console.log('Brand Identity initialized');
+    console.log('Brand Identity initialized with clean logo');
   }
 
   applyBrandColors() {
@@ -44,26 +44,37 @@ class BrandIdentity {
     // Header logo
     const headerLogo = document.querySelector('.header-logo, .logo img, .brand-logo');
     if (headerLogo) {
-      headerLogo.src = '/images/logo-camping-journey-clean.png';
+      headerLogo.src = '/images/logo-camping-journey-clean.png?v=2';
       headerLogo.alt = 'Camping Journey Equipaments MX';
       
       // Add loading optimization
       headerLogo.loading = 'eager';
       headerLogo.decoding = 'async';
+      console.log('Header logo updated to clean version');
     }
 
     // Footer logo
     const footerLogo = document.querySelector('.footer-logo img');
     if (footerLogo) {
-      footerLogo.src = '/images/logo-camping-journey-clean.png';
+      footerLogo.src = '/images/logo-camping-journey-clean.png?v=2';
       footerLogo.alt = 'Camping Journey Equipaments MX';
+      console.log('Footer logo updated to clean version');
     }
 
     // Sidebar logo
     const sidebarLogo = document.querySelector('.sidebar-logo img');
     if (sidebarLogo) {
-      sidebarLogo.src = '/images/logo-camping-journey-clean.png';
+      sidebarLogo.src = '/images/logo-camping-journey-clean.png?v=2';
       sidebarLogo.alt = 'Camping Journey';
+      console.log('Sidebar logo updated to clean version');
+    }
+
+    // Utilities logo
+    const utilitiesLogo = document.querySelector('.utilities-logo');
+    if (utilitiesLogo) {
+      utilitiesLogo.src = '/images/logo-camping-journey-clean.png?v=2';
+      utilitiesLogo.alt = 'Camping Journey';
+      console.log('Utilities logo updated to clean version');
     }
   }
 
@@ -73,7 +84,7 @@ class BrandIdentity {
     if (communitySection) {
       const logoContainer = communitySection.querySelector('.community-logo');
       if (logoContainer) {
-        logoContainer.innerHTML = `<img src="/images/logo-camping-journey-clean.png" alt="Camping Journey Community" class="fade-in">`;
+        logoContainer.innerHTML = `<img src="/images/logo-camping-journey-clean.png?v=2" alt="Camping Journey Community" class="fade-in">`;
       }
     }
 
@@ -82,7 +93,7 @@ class BrandIdentity {
     productCards.forEach(card => {
       const logoImg = card.querySelector('.product-brand-logo');
       if (logoImg) {
-        logoImg.src = '/images/logo-camping-journey-clean.png';
+        logoImg.src = '/images/logo-camping-journey-clean.png?v=2';
         logoImg.alt = 'Camping Journey';
       }
     });
@@ -93,7 +104,7 @@ class BrandIdentity {
       const logoContainer = newsletterSection.querySelector('.newsletter-logo');
       if (logoContainer && !logoContainer.querySelector('img')) {
         logoContainer.innerHTML = `
-          <img src="/images/logo-camping-journey-clean.png" 
+          <img src="/images/logo-camping-journey-clean.png?v=2" 
                alt="Camping Journey Newsletter" 
                style="height: 40px; margin-bottom: 1rem;"
                class="fade-in">
@@ -106,7 +117,7 @@ class BrandIdentity {
     if (wildNewsSection) {
       const wildNewsLogo = wildNewsSection.querySelector('.wild-news-logo');
       if (wildNewsLogo) {
-        wildNewsLogo.innerHTML = `<img src="/images/logo-camping-journey-clean.png" alt="Wild News" class="fade-in" style="height: 60px; margin-bottom: 1rem;">`;
+        wildNewsLogo.innerHTML = `<img src="/images/logo-camping-journey-clean.png?v=2" alt="Wild News" class="fade-in" style="height: 60px; margin-bottom: 1rem;">`;
       }
     }
 
@@ -115,7 +126,7 @@ class BrandIdentity {
     if (testimonialsSection) {
       const logoImg = testimonialsSection.querySelector('.testimonial-brand-logo');
       if (logoImg) {
-        logoImg.src = '/images/logo-camping-journey-clean.png';
+        logoImg.src = '/images/logo-camping-journey-clean.png?v=2';
         logoImg.alt = 'Camping Journey';
       }
     }
@@ -125,13 +136,13 @@ class BrandIdentity {
     if (dashboardSection) {
       const dashboardLogo = dashboardSection.querySelector('.dashboard-logo img');
       if (dashboardLogo) {
-        dashboardLogo.src = '/images/logo-camping-journey-clean.png';
+        dashboardLogo.src = '/images/logo-camping-journey-clean.png?v=2';
         dashboardLogo.alt = 'Camping Journey Dashboard';
       }
 
       const logoContainer = dashboardSection.querySelector('.dashboard-brand');
       if (logoContainer) {
-        logoContainer.innerHTML = `<img src="/images/logo-camping-journey-clean.png" alt="Camping Journey Dashboard" style="height: 40px;">`;
+        logoContainer.innerHTML = `<img src="/images/logo-camping-journey-clean.png?v=2" alt="Camping Journey Dashboard" style="height: 40px;">`;
       }
     }
   }
@@ -147,6 +158,14 @@ class BrandIdentity {
     });
 
     console.log(`Logo updated to: ${newLogoPath}`);
+  }
+
+  // Method to force logo refresh (cache busting)
+  refreshLogos() {
+    const timestamp = Date.now();
+    const newPath = `/images/logo-camping-journey-clean.png?v=${timestamp}`;
+    this.updateLogo(newPath);
+    console.log('Logos refreshed with cache busting');
   }
 
   // Method to apply brand theme
@@ -196,6 +215,13 @@ function initBrandIdentity() {
   if (!brandIdentity) {
     brandIdentity = new BrandIdentity();
     window.brandIdentity = brandIdentity;
+    
+    // Force refresh logos after a short delay
+    setTimeout(() => {
+      if (brandIdentity) {
+        brandIdentity.refreshLogos();
+      }
+    }, 1000);
   }
 }
 
