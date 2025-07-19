@@ -1,94 +1,244 @@
 /**
- * Cinematic Loader CSS - Camping Journey Equipaments MX
- * Estilos para o efeito de carregamento cinematográfico
+ * ===================================
+ * CINEMATIC LOADER - CAMPING JOURNEY
+ * Mountain Adventure Loading Experience
+ * ===================================
  */
 
+/* Loader Container */
 .cinematic-loader {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--night-black);
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #0d1117 0%, #1a1f2e 50%, #0d1117 100%);
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  z-index: 9999;
+  align-items: center;
+  z-index: 10000;
   opacity: 1;
-  transition: opacity 1s ease-out;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.cinematic-loader.loaded {
+.cinematic-loader.fade-out {
   opacity: 0;
+  pointer-events: none;
 }
 
-.loader-content {
-  text-align: center;
-  color: var(--cloud-white);
-  max-width: 300px;
-}
-
+/* Mountain Logo Container */
 .loader-logo {
-  margin-bottom: 2rem;
-  animation: pulse 2s infinite ease-in-out;
-}
-
-.loader-logo svg {
-  color: var(--accent-color);
-  filter: drop-shadow(0 0 10px rgba(var(--accent-color-rgb), 0.6));
-}
-
-.loader-progress {
-  height: 4px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  margin: 1.5rem 0;
-  overflow: hidden;
-}
-
-.loader-bar {
-  height: 100%;
-  width: 0;
-  background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-color-secondary) 100%);
-  transition: width 0.3s ease-out;
   position: relative;
-  overflow: hidden;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.loader-bar::after {
+/* Mountain SVG Styling */
+.mountain-logo {
+  width: 280px;
+  height: 180px;
+  filter: drop-shadow(0 0 30px rgba(46, 139, 87, 0.4));
+  animation: mountainFloat 4s ease-in-out infinite;
+}
+
+@keyframes mountainFloat {
+  0%, 100% { 
+    transform: translateY(0px) scale(1); 
+    filter: drop-shadow(0 0 30px rgba(46, 139, 87, 0.4));
+  }
+  50% { 
+    transform: translateY(-10px) scale(1.02); 
+    filter: drop-shadow(0 0 40px rgba(46, 139, 87, 0.6));
+  }
+}
+
+/* Brand Text */
+.loader-brand {
+  text-align: center;
+  color: #f0f6fc;
+}
+
+.loader-brand h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #2E8B57 0%, #32CD32 50%, #228B22 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textShimmer 3s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+  0%, 100% { 
+    background-position: 0% 50%; 
+    transform: scale(1);
+  }
+  50% { 
+    background-position: 100% 50%; 
+    transform: scale(1.02);
+  }
+}
+
+.loader-brand p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  color: #8b949e;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Loading Progress */
+.loader-progress {
+  position: relative;
+  width: 300px;
+  height: 4px;
+  background: rgba(139, 148, 158, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.loader-progress::before {
   content: '';
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
-  animation: shimmer 1.5s infinite;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #2E8B57 20%, 
+    #32CD32 50%, 
+    #228B22 80%, 
+    transparent 100%
+  );
+  animation: progressSlide 2s ease-in-out infinite;
 }
 
+@keyframes progressSlide {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Loading Text */
 .loader-text {
-  font-size: 0.9rem;
-  opacity: 0.8;
-  letter-spacing: 1px;
-  font-weight: 300;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #8b949e;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  animation: loadingDots 2s ease-in-out infinite;
 }
 
-/* Animação para a página quando o loader termina */
-body {
-  opacity: 0.8;
-  transition: opacity 1s ease-out;
+@keyframes loadingDots {
+  0%, 20% { opacity: 0.5; }
+  50% { opacity: 1; }
+  80%, 100% { opacity: 0.5; }
 }
 
-body.page-loaded {
-  opacity: 1;
+/* Mountain Particles Effect */
+.mountain-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-/* Animação para o logo */
-@keyframes logoRotate {
+.mountain-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #32CD32;
+  border-radius: 50%;
+  animation: particleFloat 6s linear infinite;
+  opacity: 0;
+}
+
+@keyframes particleFloat {
   0% {
-    transform: rotate(0deg);
+    transform: translateY(100vh) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateY(-100px) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mountain-logo {
+    width: 220px;
+    height: 140px;
+  }
+  
+  .loader-brand h1 {
+    font-size: 2rem;
+  }
+  
+  .loader-brand p {
+    font-size: 1rem;
+  }
+  
+  .loader-progress {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mountain-logo {
+    width: 180px;
+    height: 110px;
+  }
+  
+  .loader-brand h1 {
+    font-size: 1.8rem;
+  }
+  
+  .loader-brand p {
+    font-size: 0.9rem;
+  }
+  
+  .loader-progress {
+    width: 200px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .mountain-logo,
+  .loader-brand h1,
+  .loader-brand p,
+  .loader-progress::before,
+  .loader-text,
+  .mountain-particle {
+    animation: none;
+  }
+  
+  .mountain-logo {
+    transform: none;
   }
 }
