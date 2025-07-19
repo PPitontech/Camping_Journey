@@ -24,15 +24,118 @@ class BrandIdentity {
 
   init() {
     this.applyBrandColors();
+    this.superAggressiveLogoForce(); // SUPER AGGRESSIVE FORCE
     this.setupLogoElements();
     this.setupBrandConsistency();
     
-    // Force immediate logo refresh
-    setTimeout(() => {
-      this.forceLogoRefresh();
-    }, 500);
+    // Multiple aggressive refresh attempts
+    setTimeout(() => this.superAggressiveLogoForce(), 100);
+    setTimeout(() => this.superAggressiveLogoForce(), 500);
+    setTimeout(() => this.superAggressiveLogoForce(), 1000);
+    setTimeout(() => this.superAggressiveLogoForce(), 2000);
+    setTimeout(() => this.superAggressiveLogoForce(), 5000);
     
-    console.log('Brand Identity initialized with final mountain logo');
+    console.log('🚀 SUPER AGGRESSIVE Brand Identity initialized with FORCE REFRESH');
+  }
+
+  // SUPER AGGRESSIVE LOGO FORCING
+  superAggressiveLogoForce() {
+    console.log('🔥🔥🔥 SUPER AGGRESSIVE LOGO FORCE STARTING...');
+    
+    const timestamp = Date.now();
+    const randomId = Math.random().toString(36).substring(7);
+    const superForceUrl = `/images/logo-camping-journey-final.png?FORCE=${timestamp}&ID=${randomId}&CACHE_BUST=true`;
+    
+    // All possible logo selectors - COMPREHENSIVE
+    const logoSelectors = [
+      '.header-logo',
+      '.sidebar-logo-img', 
+      '.footer-logo img',
+      '.utilities-logo',
+      '.brand-logo img',
+      '.logo img',
+      'img[alt*="Camping Journey"]',
+      'img[src*="logo"]',
+      '.main-logo',
+      '.site-logo',
+      '.brand-image',
+      '.company-logo'
+    ];
+    
+    let updatedCount = 0;
+    
+    logoSelectors.forEach(selector => {
+      const elements = document.querySelectorAll(selector);
+      elements.forEach((img, index) => {
+        if (img && img.tagName === 'IMG') {
+          console.log(`🔥 FORCING UPDATE: ${selector}[${index}]`, img);
+          
+          // Force immediate change
+          img.style.opacity = '0';
+          img.src = '';
+          
+          setTimeout(() => {
+            img.src = superForceUrl;
+            img.style.opacity = '1';
+            img.style.transition = 'opacity 0.3s ease';
+            updatedCount++;
+            
+            img.onload = () => {
+              console.log(`✅ SUPER FORCE SUCCESS: ${selector}[${index}]`);
+              img.style.filter = 'brightness(1.05)'; // Slight brightness to confirm load
+              setTimeout(() => {
+                img.style.filter = ''; // Reset filter
+              }, 1000);
+            };
+            
+            img.onerror = () => {
+              console.error(`❌ SUPER FORCE FAILED: ${selector}[${index}] - trying fallback`);
+              img.src = `/images/Logo_Camping_Journey1.png?FALLBACK=${timestamp}`;
+            };
+          }, 50 * index); // Stagger updates
+        }
+      });
+    });
+    
+    // Force DOM refresh
+    document.body.style.display = 'none';
+    document.body.offsetHeight; // Trigger reflow
+    document.body.style.display = '';
+    
+    console.log(`🎯 SUPER AGGRESSIVE FORCE COMPLETED - Updated ${updatedCount} elements`);
+    
+    // Additional force for stubborn elements
+    this.forceStubborn();
+  }
+
+  // Force stubborn elements that resist change
+  forceStubborn() {
+    console.log('💪 Forcing stubborn logo elements...');
+    
+    const timestamp = Date.now();
+    const forceUrl = `/images/logo-camping-journey-final.png?STUBBORN=${timestamp}`;
+    
+    // Find images by source
+    const allImages = document.querySelectorAll('img');
+    allImages.forEach((img, index) => {
+      if (img.src.includes('logo') || img.alt.toLowerCase().includes('camping')) {
+        console.log(`💪 Forcing stubborn image ${index}:`, img.src);
+        
+        // Replace with new image element
+        const newImg = img.cloneNode(true);
+        newImg.src = forceUrl;
+        newImg.style.opacity = '0';
+        
+        img.parentNode.insertBefore(newImg, img);
+        img.remove();
+        
+        // Fade in new image
+        setTimeout(() => {
+          newImg.style.opacity = '1';
+          newImg.style.transition = 'opacity 0.5s ease';
+        }, 100);
+      }
+    });
   }
 
   applyBrandColors() {
@@ -48,7 +151,7 @@ class BrandIdentity {
 
   setupLogoElements() {
     const timestamp = Date.now();
-    const logoUrl = `/images/logo-camping-journey-final.png?t=${timestamp}`;
+    const logoUrl = `/images/logo-camping-journey-final.png?setup=${timestamp}`;
     
     // Header logo
     const headerLogo = document.querySelector('.header-logo, .logo img, .brand-logo');
@@ -111,7 +214,7 @@ class BrandIdentity {
 
   setupBrandConsistency() {
     const timestamp = Date.now();
-    const logoUrl = `/images/logo-camping-journey-final.png?t=${timestamp}`;
+    const logoUrl = `/images/logo-camping-journey-final.png?brand=${timestamp}`;
     
     // Community section branding
     const communitySection = document.querySelector('.community-section');
@@ -197,51 +300,9 @@ class BrandIdentity {
   // Method to force logo refresh (cache busting)
   refreshLogos() {
     const timestamp = Date.now();
-    const newPath = `/images/logo-camping-journey-final.png?t=${timestamp}`;
+    const newPath = `/images/logo-camping-journey-final.png?refresh=${timestamp}`;
     this.updateLogo(newPath);
     console.log('Final mountain logos refreshed with cache busting:', newPath);
-  }
-
-  // Force aggressive logo refresh
-  forceLogoRefresh() {
-    console.log('🔄 Forcing aggressive logo refresh...');
-    
-    // Get all possible logo selectors
-    const logoSelectors = [
-      '.header-logo',
-      '.sidebar-logo-img', 
-      '.footer-logo img',
-      '.utilities-logo',
-      '.brand-logo img',
-      '.logo img',
-      'img[alt*="Camping Journey"]'
-    ];
-    
-    const timestamp = Date.now();
-    const logoUrl = `/images/logo-camping-journey-final.png?force=${timestamp}`;
-    
-    logoSelectors.forEach(selector => {
-      const elements = document.querySelectorAll(selector);
-      elements.forEach(img => {
-        if (img) {
-          console.log(`🖼️ Updating logo: ${selector}`, img);
-          img.src = logoUrl;
-          
-          // Force reload
-          img.onload = () => {
-            console.log(`✅ Logo loaded successfully: ${selector}`);
-          };
-          
-          img.onerror = () => {
-            console.error(`❌ Failed to load logo: ${selector}`, logoUrl);
-            // Try fallback
-            img.src = `/images/Logo_Camping_Journey1.png?t=${timestamp}`;
-          };
-        }
-      });
-    });
-    
-    console.log('🎯 Aggressive logo refresh completed');
   }
 
   // Method to apply brand theme
@@ -291,28 +352,31 @@ function initBrandIdentity() {
   if (!brandIdentity) {
     brandIdentity = new BrandIdentity();
     window.brandIdentity = brandIdentity;
-    
-    // Multiple refresh attempts
-    setTimeout(() => {
-      if (brandIdentity) {
-        brandIdentity.forceLogoRefresh();
-      }
-    }, 1000);
-    
-    setTimeout(() => {
-      if (brandIdentity) {
-        brandIdentity.forceLogoRefresh();
-      }
-    }, 3000);
   }
 }
 
-// Auto-initialize
+// SUPER AGGRESSIVE INITIALIZATION
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initBrandIdentity);
 } else {
   initBrandIdentity();
 }
+
+// Force refresh on page visibility change
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden && brandIdentity) {
+    console.log('🔄 Page became visible - forcing logo refresh');
+    brandIdentity.superAggressiveLogoForce();
+  }
+});
+
+// Force refresh on window focus
+window.addEventListener('focus', () => {
+  if (brandIdentity) {
+    console.log('🔄 Window focused - forcing logo refresh');
+    brandIdentity.superAggressiveLogoForce();
+  }
+});
 
 // Export
 window.BrandIdentity = BrandIdentity;
