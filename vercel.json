@@ -1,74 +1,78 @@
 {
   "version": 2,
-  "name": "camping-journey-mx",
-  "public": true,
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "builds": [
+    {
+      "src": "src/server.ts",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/js/(.*)",
+      "dest": "/public/js/$1",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
+        "Pragma": "no-cache",
+        "Expires": "0"
+      }
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/public/css/$1", 
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
+        "Pragma": "no-cache",
+        "Expires": "0"
+      }
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/public/images/$1",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
+        "Pragma": "no-cache",
+        "Expires": "0"
+      }
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate, max-age=0"
         },
         {
-          "key": "X-Frame-Options",
-          "value": "DENY"
+          "key": "Pragma", 
+          "value": "no-cache"
         },
         {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
+          "key": "Expires",
+          "value": "0"
         },
         {
-          "key": "Strict-Transport-Security",
-          "value": "max-age=31536000; includeSubDomains"
-        }
-      ]
-    },
-    {
-      "source": "/css/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/js/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/images/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2))",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "key": "X-Force-Refresh",
+          "value": "true"
         }
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/www.camping-journey.com.mx/(.*)",
-      "destination": "https://camping-journey.com.mx/$1",
-      "permanent": true
+  "functions": {
+    "src/server.ts": {
+      "maxDuration": 10
     }
-  ]
+  }
 }
 
